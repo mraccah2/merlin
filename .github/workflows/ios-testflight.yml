@@ -43,9 +43,9 @@ jobs:
           # Prepend this keychain to the user search list. Serialized via
           # Prepend under the HOST-WIDE mutex shared by every signing repo on this
           # mini. This used to use /tmp/merlin-ci-keychain.lock — a per-repo lock,
-          # which serialized merlin against itself but NOT against gandalf, Scamper,
-          # listo, Tracker, Butterfly or foodierank, all of which mutate the same
-          # global user search list on this host. A lock nobody else contends for is
+          # which serialized this repo against itself but NOT against the other
+          # signing repos sharing this runner, all of which mutate the same global
+          # user search list on this host. A lock nobody else contends for is
           # not a lock. The shared helper is also crash-safe (trap release + stale
           # breaking); the old bare mkdir leaked the lock forever on SIGKILL.
           source "$GITHUB_WORKSPACE/.github/scripts/ci-keychain-lock.sh"

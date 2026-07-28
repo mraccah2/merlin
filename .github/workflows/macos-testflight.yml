@@ -55,7 +55,7 @@ jobs:
           # two concurrent jobs lose each other's entry, and a list written from a
           # stale read can drop login.keychain-db — which takes the Gandalf agent on
           # this same host fully auth-down (Max OAuth token lives there, no API-key
-          # fallback by design). See mraccah2/gandalf architecture.md 2026-07-28.
+          # fallback by design). See the gandalf repo's architecture.md 2026-07-28.
           source "$GITHUB_WORKSPACE/.github/scripts/ci-keychain-lock.sh"
           kc_lock_acquire
           kc_prepend "$KEYCHAIN_PATH"

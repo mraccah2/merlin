@@ -4,7 +4,7 @@
 # signing workflows: `source "$GITHUB_WORKSPACE/.github/scripts/ci-keychain-lock.sh"`.
 #
 # ┌────────────────────────────────────────────────────────────────────────────┐
-# │ CANONICAL SOURCE: mraccah2/gandalf .github/scripts/ci-keychain-lock.sh      │
+# │ CANONICAL SOURCE: the gandalf repo, .github/scripts/ci-keychain-lock.sh     │
 # │                                                                            │
 # │ Every macOS-signing repo on the shared self-hosted mini vendors a BYTE-     │
 # │ IDENTICAL copy of this file. Do NOT edit a vendored copy — edit the         │
